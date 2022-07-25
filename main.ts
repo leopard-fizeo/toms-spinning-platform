@@ -1,0 +1,18 @@
+minode.onSwitchEvent(ConnName.A0, SwitchEvent.MINODE_SWITCH_EVT_OPEN, function () {
+    minode.FanControl_1(AnalogConnName.Analog_A2, 10)
+    basic.pause(10000)
+    minode.FanControl_1(AnalogConnName.Analog_A0, 30)
+    basic.pause(10000)
+    minode.FanControl_1(AnalogConnName.Analog_A0, 50)
+})
+basic.forever(function () {
+    minode.rgbChooseColor(ConnName.A1, MiNodeColor.MiNode_RGB_COLOR_RED)
+    basic.pause(100)
+    minode.rgbChooseColor(ConnName.A1, MiNodeColor.MiNode_RGB_COLOR_YELLOW)
+    basic.pause(100)
+    minode.rgbChooseColor(ConnName.A1, MiNodeColor.MiNode_RGB_COLOR_GREEN)
+    basic.pause(100)
+    minode.rgbChooseColor(ConnName.A1, MiNodeColor.MiNode_RGB_COLOR_BLUE)
+    basic.pause(100)
+    minode.rgbChooseColor(ConnName.A1, MiNodeColor.MiNode_RGB_COLOR_PINK)
+})
